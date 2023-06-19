@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    async rewrites() { return [{ source: '/api/:path*', destination: `http://tp6.test/:path*` }] }
+}
 
 module.exports = nextConfig
